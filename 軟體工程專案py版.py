@@ -205,6 +205,7 @@ def manager_button_clicked():
            temp = temp +  stop_time[i]
        temp = temp/len(stop_time)
        print("顧客平均停留時間:" + str(temp))
+       print("---------------")
    
    def file_button_clicked():
        staff_name = ['王一','陳二','張三','李四','黃五']
@@ -212,6 +213,7 @@ def manager_button_clicked():
        staff_work = ['負責1.2.3.4桌點單','負責做菜','負責清潔','負責帶位','管理餐廳']
        for i in range(0,len(staff_name)):
            print(staff_name[i],staff_position[i],staff_work[i])
+       print("---------------")
 
        def add_button_clicked():
            staff_name.append(func.get('1.0','1.end'))
@@ -276,6 +278,7 @@ def manager_button_clicked():
            quantity.append(orderdata.count(menu[i]))
        for i in range(0,len(reserve)):
            print(reserve[i],quantity[i])
+       print("---------")
 
    file_button = tkinter.Button(manager_win,text="staff \n file", font=("Arial", 14, "bold"), bg="white", fg="black", command=file_button_clicked)
    file_button.place(relx=0.1, rely=0.1)
@@ -389,4 +392,4 @@ reception_button.place(relx=0.25, rely=0.3)
 busboy_button =  tkinter.Button(text="busboy", font=("Arial", 14, "bold"), padx=30, pady=30, bg="white", fg="black", command=busboy_button_clicked)
 busboy_button.place(relx=0.55, rely=0.3)
 
-
+window.mainloop()
